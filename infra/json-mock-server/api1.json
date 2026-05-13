@@ -1,0 +1,95 @@
+{
+  "products": [
+    {
+      "id": 5,
+      "brand": "AMD",
+      "model": "Ryzen 7 7800X3D",
+      "mpn": "100-100000910WOF",
+      "category": "CPU",
+      "price": 299.00,
+      "stock": 22,
+      "retail_price": 389.00,
+      "ean": "0730143314558",
+      "moq": 1,
+      "condition": "NEW"
+    },
+    {
+      "id": 1,
+      "brand": "Gigabyte",
+      "model": "B650 Gaming X",
+      "mpn": "GA-B650-GX",
+      "category": "Motherboard",
+      "price": 149.99,
+      "stock": 8,
+      "retail_price": 189.99,
+      "ean": "4719331852290",
+      "moq": 1,
+      "condition": "NEW"
+    },
+    {
+      "id": 2,
+      "brand": "ASUS",
+      "model": "ROG Strix B650E-F",
+      "mpn": "90MB1BF0-M0EAY0",
+      "category": "Motherboard",
+      "price": 189.00,
+      "stock": 32,
+      "retail_price": 239.00,
+      "ean": "4711081939109",
+      "moq": 1,
+      "condition": "NEW"
+    },
+    {
+      "id": 3,
+      "brand": "Kingston",
+      "model": "Fury Beast 32GB DDR5-6000",
+      "mpn": "KF560C40BBK2-32",
+      "category": "RAM",
+      "price": 85.00,
+      "stock": 60,
+      "retail_price": 109.00,
+      "ean": "0740617326543",
+      "moq": 2,
+      "condition": "NEW"
+    },
+    {
+      "id": 4,
+      "brand": "Samsung",
+      "model": "990 PRO 2TB",
+      "mpn": "MZ-V9P2T0BW",
+      "category": "SSD",
+      "price": 169.00,
+      "stock": 12,
+      "retail_price": 219.00,
+      "ean": "8806094476272",
+      "moq": 1,
+      "condition": "NEW"
+    },
+    {
+      "id": 6,
+      "brand": "LG",
+      "model": "UltraGear 27GN800",
+      "mpn": "27GN800-B",
+      "category": "Monitor",
+      "price": 239.00,
+      "stock": 10,
+      "retail_price": 289.00,
+      "ean": "8806091234567",
+      "moq": 1,
+      "condition": "NEW"
+    },
+    {
+      "id": 7,
+      "brand": "HP",
+      "model": "LaserJet Pro M404dn",
+      "mpn": "W1A53A",
+      "category": "Printer",
+      "price": 189.00,
+      "stock": 7,
+      "retail_price": 239.00,
+      "ean": "0192018367890",
+      "moq": 1,
+      "condition": "NEW"
+    }
+  ]
+}

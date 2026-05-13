@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "pk": 9901,
+      "mfr": "AsRock",
+      "mod_num": "X670E Taichi",
+      "upc_ean": "X670E-TC",
+      "category": "Motherboard",
+      "feat": "E-ATX;DDR5;USB4",
+      "val_unit": "475.00",
+      "q_avail": "2",
+      "trade_info": {
+        "msrp": "569.00",
+        "gtin": "4718487898800",
+        "bulk_min": "1",
+        "prod_state": "NEW"
+      }
+    },
+    {
+      "pk": 9902,
+      "mfr": "Seagate",
+      "mod_num": "IronWolf 8TB",
+      "upc_ean": "ST8000VN004",
+      "category": "HDD",
+      "feat": "HDD;SATA3;7200RPM",
+      "val_unit": "189.90",
+      "q_avail": "18",
+      "trade_info": {
+        "msrp": "229.99",
+        "gtin": "0763649171607",
+        "bulk_min": "5",
+        "prod_state": "NEW"
+      }
+    },
+    {
+      "pk": 9903,
+      "mfr": "TeamGroup",
+      "mod_num": "T-Force Delta",
+      "upc_ean": "FF3D532G6000",
+      "category": "RAM",
+      "feat": "32GB;6000MHz;RGB",
+      "val_unit": "99.00",
+      "q_avail": "48",
+      "trade_info": {
+        "msrp": "125.00",
+        "gtin": "0765441660779",
+        "bulk_min": "2",
+        "prod_state": "NEW"
+      }
+    },
+    {
+      "pk": 9904,
+      "mfr": "Zotac",
+      "mod_num": "RTX 4080 Trinity",
+      "upc_ean": "ZT-D40810D-10P",
+      "category": "GPU",
+      "feat": "16GB;GDDR6X;TripleFan",
+      "val_unit": "1099.00",
+      "q_avail": "1",
+      "trade_info": {
+        "msrp": "1279.00",
+        "gtin": "4895173620805",
+        "bulk_min": "1",
+        "prod_state": "NEW"
+      }
+    },
+    {
+      "pk": 9905,
+      "mfr": "AMD",
+      "mod_num": "Ryzen 5 7600",
+      "upc_ean": "100-100001015BOX",
+      "category": "CPU",
+      "feat": "6-Core;3.8GHz;65W",
+      "val_unit": "219.00",
+      "q_avail": "28",
+      "trade_info": {
+        "msrp": "259.00",
+        "gtin": "0730143315609",
+        "bulk_min": "1",
+        "prod_state": "REFURBISHED"
+      }
+    },
+    {
+      "pk": 9906,
+      "mfr": "WD",
+      "mod_num": "Red Plus 4TB",
+      "upc_ean": "WD40EFZX",
+      "category": "HDD",
+      "feat": "HDD;NAS;5400RPM",
+      "val_unit": "109.00",
+      "q_avail": "36",
+      "trade_info": {
+        "msrp": "139.00",
+        "gtin": "0718037878393",
+        "bulk_min": "4",
+        "prod_state": "NEW"
+      }
+    },
+    {
+      "pk": 9907,
+      "mfr": "Canon",
+      "mod_num": "PIXMA G3420",
+      "upc_ean": "G3420",
+      "category": "Printer",
+      "feat": "InkTank;WiFi;Color",
+      "val_unit": "199.00",
+      "q_avail": "9",
+      "trade_info": {
+        "msrp": "229.00",
+        "gtin": "4549292160000",
+        "bulk_min": "1",
+        "prod_state": "NEW"
+      }
+    }
+  ]
+}

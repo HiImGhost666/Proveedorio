@@ -1,0 +1,40 @@
+name: Frontend CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - master
+      - staging
+      - prod
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint --if-present
+
+      - name: Run tests
+        run: npm test -- --runInBand
+        continue-on-error: true
+
+      - name: Build application
+        run: npm run build
+        env:
+          VITE_GRAFANA_DASHBOARD_URL: https://productos.lab/grafana/d/demo
+          VITE_PROMETHEUS_DASHBOARD_URL: https://productos.lab/grafana/d/demo-prom

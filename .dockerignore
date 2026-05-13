@@ -1,0 +1,42 @@
+# VCS
+.git
+.gitattributes
+.github
+
+# OS/editor
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+**/*.log
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Java/Maven
+**/target
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+**/node_modules
+**/dist
+**/dist-ssr
+*.local
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+**/build
+**/.cache
+**/.eslintcache
+**/tsconfig.tsbuildinfo
+
+# Infra (not needed for backend/frontend builds)
+infra/**

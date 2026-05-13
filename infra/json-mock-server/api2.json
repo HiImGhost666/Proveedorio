@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "identifier": "PROD-AMD-05",
+      "manufacturer": {
+        "name": "AMD",
+        "part_number": "100-100000910WOF",
+        "ean": "0730143314558"
+      },
+      "marketing_name": "Ryzen 7 7800X3D (V-Cache)",
+      "category": "CPU",
+      "commercial": {
+        "price_data": { "amount": 299.00, "currency": "EUR" },
+        "inventory": { "quantity": 8 },
+        "suggested_pvp": 379.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "EXT-9922",
+      "manufacturer": {
+        "name": "Gigabyte",
+        "part_number": "GA-B650-GX",
+        "ean": "4719331852290"
+      },
+      "marketing_name": "B650 Gaming X AX",
+      "category": "Motherboard",
+      "commercial": {
+        "price_data": { "amount": 139.00, "currency": "EUR" },
+        "inventory": { "quantity": 5 },
+        "suggested_pvp": 189.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-AS-01",
+      "manufacturer": { "name": "ASUS", "part_number": "90MB1BA0", "ean": "4711387284025" },
+      "marketing_name": "ROG Strix Z790-E",
+      "category": "Motherboard",
+      "specs": { "tech": { "chipset": "Z790", "form_factor": "ATX" } },
+      "commercial": {
+        "price_data": { "amount": 385.00, "currency": "EUR" },
+        "inventory": { "quantity": 3 },
+        "suggested_pvp": 489.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-WD-02",
+      "manufacturer": { "name": "WD", "part_number": "WDS100T3B0E", "ean": "0718037896946" },
+      "marketing_name": "Blue SN580",
+      "category": "SSD",
+      "specs": { "tech": { "size": "1TB", "type": "NVMe" } },
+      "commercial": {
+        "price_data": { "amount": 44.90, "currency": "EUR" },
+        "inventory": { "quantity": 90 },
+        "suggested_pvp": 59.90,
+        "min_purchase_qty": 5,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-GS-03",
+      "manufacturer": { "name": "G.Skill", "part_number": "F5-6000J30", "ean": "4713294223357" },
+      "marketing_name": "Trident Z5 Neo",
+      "category": "RAM",
+      "specs": { "tech": { "kit": "32GB", "speed": "6000MTs" } },
+      "commercial": {
+        "price_data": { "amount": 89.00, "currency": "EUR" },
+        "inventory": { "quantity": 35 },
+        "suggested_pvp": 115.00,
+        "min_purchase_qty": 2,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-MSI-04",
+      "manufacturer": { "name": "MSI", "part_number": "V510-001R", "ean": "4719072984991" },
+      "marketing_name": "RTX 4060 Ti Ventus",
+      "category": "GPU",
+      "specs": { "tech": { "memory": "8GB", "clockspeed": "2580MHz" } },
+      "commercial": {
+        "price_data": { "amount": 295.00, "currency": "EUR" },
+        "inventory": { "quantity": 9 },
+        "suggested_pvp": 369.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-INT-05",
+      "manufacturer": { "name": "Intel", "part_number": "BX8071514700K", "ean": "0735858540674" },
+      "marketing_name": "Core i7-14700K",
+      "category": "CPU",
+      "specs": { "tech": { "p_cores": 8, "e_cores": 12 } },
+      "commercial": {
+        "price_data": { "amount": 299.00, "currency": "EUR" },
+        "inventory": { "quantity": 18 },
+        "suggested_pvp": 389.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-NVIDIA-06",
+      "manufacturer": { "name": "NVIDIA", "part_number": "900-1G136-2530-000", "ean": "0812674028611" },
+      "marketing_name": "RTX 4070 Founders Edition",
+      "category": "GPU",
+      "specs": { "tech": { "memory": "12GB", "clockspeed": "2475MHz" } },
+      "commercial": {
+        "price_data": { "amount": 579.00, "currency": "EUR" },
+        "inventory": { "quantity": 5 },
+        "suggested_pvp": 649.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-DELL-MON-01",
+      "manufacturer": { "name": "Dell", "part_number": "U2723QE", "ean": "5397184748187" },
+      "marketing_name": "UltraSharp 27 4K USB-C Hub",
+      "category": "Monitor",
+      "commercial": {
+        "price_data": { "amount": 429.00, "currency": "EUR" },
+        "inventory": { "quantity": 12 },
+        "suggested_pvp": 499.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    },
+    {
+      "identifier": "PROD-BRO-PRN-02",
+      "manufacturer": { "name": "Brother", "part_number": "HL-L2350DW", "ean": "4977766782382" },
+      "marketing_name": "HL-L2350DW Mono Laser",
+      "category": "Printer",
+      "commercial": {
+        "price_data": { "amount": 129.00, "currency": "EUR" },
+        "inventory": { "quantity": 20 },
+        "suggested_pvp": 159.00,
+        "min_purchase_qty": 1,
+        "item_condition": "NEW"
+      }
+    }
+  ]
+}

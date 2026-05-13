@@ -1,0 +1,146 @@
+.product-detail-container {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.product-detail-card {
+  max-width: 7xl;
+  margin: auto;
+}
+
+.back-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.product-header {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.product-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.product-mpn {
+  font-family: var(--font-mono);
+  background-color: var(--bg-tertiary);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.specifications-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .specifications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.specifications-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--bg-tertiary);
+  padding-bottom: 8px;
+}
+
+.specifications-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.specification-item {
+  background-color: var(--bg-primary);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.specification-key {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.specification-value {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.offers-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.offers-table-container {
+  overflow-x: auto;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offers-table {
+  min-width: 100%;
+  font-size: 0.875rem;
+  text-align: left;
+  color: var(--text-secondary);
+}
+
+.offers-table thead {
+  background-color: var(--bg-primary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.offers-table th,
+.offers-table td {
+  padding: 16px;
+}
+
+.offers-table tbody tr {
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.offers-table tbody tr:hover {
+  background-color: var(--bg-primary);
+}
+
+.status-badge {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+.status-badge-available {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success-text);
+}
+
+.status-badge-unavailable {
+  background-color: var(--color-status-error-bg);
+  color: var(--color-status-error-text);
+}

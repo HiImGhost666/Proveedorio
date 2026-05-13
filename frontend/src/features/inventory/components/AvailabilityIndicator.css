@@ -1,0 +1,27 @@
+.availability-indicator {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.availability-indicator--disponible {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success-text);
+}
+
+.availability-indicator--bajo-stock {
+  background-color: var(--color-status-warning-bg);
+  color: var(--color-status-warning-text);
+}
+
+.availability-indicator--sin-stock {
+  background-color: var(--color-status-error-bg);
+  color: var(--color-status-error-text);
+}
+
+.availability-indicator--no-info {
+  background-color: var(--color-status-neutral-bg);
+  color: var(--color-status-neutral-text);
+}

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Corporate palette */
+  --corp-institutional: #091f2c;
+  /* Pantone 5395 C */
+  --corp-primary: #c10016;
+  /* Pantone 3517 C */
+  --corp-soft: #b4b5df;
+  /* Pantone 270 C */
+  --corp-neutral-700: #4f758b;
+  /* Pantone 5405 C */
+  --corp-neutral-500: #7a99ac;
+  /* Pantone 5425 C */
+  --corp-neutral-300: #a6bbc8;
+  /* Pantone 5435 C */
+  --corp-white: #ffffff;
+
+  /* Institutional scale */
+  --brand-900: var(--corp-institutional);
+  --brand-800: #163243;
+  --brand-700: #2b4f63;
+  --brand-600: var(--corp-neutral-700);
+  --brand-500: var(--corp-neutral-500);
+  --brand-400: var(--corp-neutral-300);
+  --brand-300: var(--corp-soft);
+  --brand-200: #d9e2ea;
+  --brand-100: #edf3f7;
+
+  /* Neutral scale */
+  --bg-primary: #f4f7f9;
+  --bg-secondary: var(--corp-white);
+  --bg-tertiary: #d3dee6;
+  --bg-input: #f7fafc;
+
+  --text-primary: #1f2f3a;
+  --text-secondary: #3e5564;
+  --text-muted: #6d8492;
+  --text-placeholder: #9ab0be;
+
+  /* Semantic aliases */
+  --color-primary: var(--corp-primary);
+  --color-primary-hover: #9f0012;
+  --color-primary-active: #7f0010;
+  --color-primary-disabled: #db8792;
+  --color-primary-light: #fae8eb;
+
+  --color-secondary: var(--brand-700);
+  --color-secondary-hover: var(--brand-800);
+
+  --color-brand-title: var(--brand-900);
+  --brand-primary: var(--color-primary);
+
+  --color-accent-red: var(--corp-primary);
+  --color-accent-orange: #8b5e34;
+
+  --color-danger: #a01624;
+  --color-danger-hover: #7e0f1b;
+
+  --color-focus-ring: #e9a7b0;
+
+  --color-status-success-bg: #e8f5ee;
+  --color-status-success-text: #1f5f46;
+  --color-status-success-border: #bfe4cd;
+  --color-status-error-bg: #fae8eb;
+  --color-status-error-text: #8d1120;
+  --color-status-error-border: #f0bec5;
+  --color-status-warning-bg: #f3f2fb;
+  --color-status-warning-text: #43476d;
+  --color-status-warning-border: #d8d4ee;
+  --color-status-neutral-bg: #eef3f7;
+  --color-status-neutral-text: #3e5564;
+  --color-status-neutral-border: #c8d6e0;
+
+  /* Semáforo de disponibilidad (NO TOCAR) */
+  --color-success-bg: #064e3b;
+  --color-success-text: #a7f3d0;
+  --color-error-bg: #7f1d1d;
+  --color-error-text: #fecaca;
+
+  --font-body: 'Wix Madefor Text', sans-serif;
+  --font-display: 'Wix Madefor Text', sans-serif;
+  --font-mono: 'Wix Madefor Text', sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Estilos globales para la Navbar */
+nav,
+header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  padding: 1rem;
+}
+
+/* Estilos mejorados para enlaces en la navbar */
+nav a,
+header a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+nav a:hover,
+header a:hover {
+  background-color: var(--brand-100);
+  color: var(--brand-600);
+}
+
+/* Botones Globales */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  line-height: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  /* Previene que el boton parta las palabras a la mitad */
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  /* Previene rotura de palabra */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-active);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-primary-disabled);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  border-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  white-space: nowrap;
+  /* Evita rotura de palabras */
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-primary);
+  border-color: var(--text-placeholder);
+  color: var(--brand-600);
+}
+
+/* Scrollbar personalizada para modo oscuro */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-placeholder);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* =============================
+   Estilos Globales de Tabla y Páginas de Listado
+============================= */
+
+/* Contenedores de Página */
+.list-page-container {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Botón Crear Global (arriba a la derecha) */
+.btn-create {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: var(--shadow-card);
+  display: inline-block;
+}
+
+.btn-create:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Contenedor de tabla estándar */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--bg-tertiary);
+  /* Soft border instead of pure white */
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Tabla en sí */
+.data-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  table-layout: fixed;
+  word-break: break-word;
+  /* Para columnas largas como IDs */
+  white-space: normal;
+}
+
+.data-table thead {
+  background-color: var(--bg-tertiary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--text-primary);
+}
+
+.data-table th {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--bg-tertiary);
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  min-width: 0;
+  /* Previene desbordamiento en flex/grid children ocultos */
+}
+
+.data-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+/* Zebra striping opcional o solo hover en todas */
+.data-table tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.data-table .clickable-row {
+  cursor: pointer;
+}
+
+/* Celdas de Acción (Botones de editar, eliminar) */
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  /* En móviles bajan */
+  white-space: nowrap;
+  /* Tienen su propia forma */
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.btn-action {
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* Soft shadow */
+}
+
+.btn-action-edit {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-action-edit:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-action-delete {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.btn-action-delete:hover {
+  background-color: var(--color-danger-hover);
+}
+
+/* Utilidades para los mensajes de la tabla (Loading/Error) */
+.table-message-center {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.error-boundary-box {
+  border: 1px solid var(--color-danger);
+  background-color: var(--color-status-error-bg);
+  color: var(--color-danger-hover);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin: 1rem 0;
+}
+
+/* =============================
+   Responsive Design (Desktop-First)
+============================= */
+@media (max-width: 1024px) {
+  .list-page-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-create {
+    width: 100%;
+    text-align: center;
+  }
+
+  .data-table th, .data-table td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .actions-cell {
+    padding-right: 0.5rem;
+    gap: 0.25rem;
+  }
+  
+  .btn-action {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .table-container {
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px; 
+  }
+  
+  .data-table th, .data-table td {
+    padding: 0.4rem 0.5rem;
+  }
+}

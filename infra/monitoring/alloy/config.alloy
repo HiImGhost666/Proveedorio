@@ -1,0 +1,13 @@
+prometheus.scrape "backend" {
+  targets = [
+    { "__address__" = "backend:8080", "job" = "backend", "application" = "inventory" },
+  ]
+  metrics_path = "/actuator/prometheus"
+  forward_to   = [prometheus.remote_write.default.receiver]
+}
+
+prometheus.remote_write "default" {
+  endpoint {
+    url = "http://prometheus:9090/api/v1/write"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id_interno": "EAV-100",
+      "vendor_brand": "MSI",
+      "model_name": "MAG B650 Tomahawk",
+      "factory_code": "7D75-001R",
+      "barcode": "4719072977566",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "socket", "val": "AM5" },
+        { "key": "wifi", "val": "Yes" },
+        { "key": "category", "val": "Motherboard" }
+      ],
+      "pricing": { "retail_price": 205.00, "pvp": 249.00, "min_qty": 1 },
+      "stock_level": 14
+    },
+    {
+      "id_interno": "EAV-101",
+      "vendor_brand": "Crucial",
+      "model_name": "P3 Plus",
+      "factory_code": "CT1000P3PSSD8",
+      "barcode": "0649528906526",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "cap", "val": "1TB" },
+        { "key": "gen", "val": "PCIe 4.0" },
+        { "key": "category", "val": "SSD" }
+      ],
+      "pricing": { "retail_price": 69.90, "pvp": 84.90, "min_qty": 5 },
+      "stock_level": 40
+    },
+    {
+      "id_interno": "EAV-102",
+      "vendor_brand": "Kingston",
+      "model_name": "Fury Renegade",
+      "factory_code": "KF560C32RSK2",
+      "barcode": "0740617334692",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "ram_total", "val": "32GB" },
+        { "key": "latency", "val": "CL32" },
+        { "key": "category", "val": "RAM" }
+      ],
+      "pricing": { "retail_price": 132.00, "pvp": 159.99, "min_qty": 2 },
+      "stock_level": 9
+    },
+    {
+      "id_interno": "EAV-103",
+      "vendor_brand": "EVGA",
+      "model_name": "SuperNOVA 850G",
+      "factory_code": "220-G6-0850-X1",
+      "barcode": "0843368063338",
+      "item_status": "REFURBISHED",
+      "attributes": [
+        { "key": "watts", "val": "850W" },
+        { "key": "cert", "val": "80+ Gold" },
+        { "key": "category", "val": "PSU" }
+      ],
+      "pricing": { "retail_price": 139.00, "pvp": 165.00, "min_qty": 1 },
+      "stock_level": 3
+    },
+    {
+      "id_interno": "EAV-104",
+      "vendor_brand": "Noctua",
+      "model_name": "NH-D15",
+      "factory_code": "NH-D15-CH-BK",
+      "barcode": "9120010195985",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "type", "val": "Air Cooler" },
+        { "key": "color", "val": "Black" },
+        { "key": "category", "val": "Cooling" }
+      ],
+      "pricing": { "retail_price": 114.90, "pvp": 134.90, "min_qty": 1 },
+      "stock_level": 11
+    },
+    {
+      "id_interno": "EAV-105",
+      "vendor_brand": "Corsair",
+      "model_name": "RM750e",
+      "factory_code": "CP-9020262-EU",
+      "barcode": "0840006637864",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "watts", "val": "750W" },
+        { "key": "cert", "val": "80+ Gold" },
+        { "key": "category", "val": "PSU" }
+      ],
+      "pricing": { "retail_price": 104.90, "pvp": 124.90, "min_qty": 1 },
+      "stock_level": 19
+    },
+    {
+      "id_interno": "EAV-106",
+      "vendor_brand": "Logitech",
+      "model_name": "MX Keys S",
+      "factory_code": "920-010959",
+      "barcode": "5099206100000",
+      "item_status": "NEW",
+      "attributes": [
+        { "key": "type", "val": "Keyboard" },
+        { "key": "category", "val": "Peripherals" }
+      ],
+      "pricing": { "retail_price": 99.90, "pvp": 119.90, "min_qty": 1 },
+      "stock_level": 25
+    }
+  ]
+}

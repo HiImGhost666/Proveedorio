@@ -1,0 +1,204 @@
+.app-layout {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    background-color: var(--bg-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.header-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-brand-title);
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 6px 10px;
+    border-radius: var(--radius-md);
+}
+
+.nav-link:hover {
+    color: var(--color-brand-title);
+    background-color: var(--brand-100);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-greeting {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover));
+    color: white;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.logout-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(193, 0, 22, 0.28);
+}
+
+.logout-button:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}
+
+.app-main {
+    flex-grow: 1;
+    width: 90%;
+    max-width: 1280px;
+    margin: 24px auto;
+}
+
+.cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.spin-icon {
+    animation: spin 1s linear infinite;
+}
+
+
+
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 2px solid white;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* =============================
+   Responsive Design (Desktop-First)
+============================= */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 8px;
+        border-top: 1px solid var(--bg-tertiary);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 20px;
+    }
+    
+    .user-greeting {
+        display: none;
+    }
+
+    nav {
+        gap: 8px;
+    }
+    
+    .nav-link {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .logout-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .app-main {
+        width: 95%;
+        margin: 16px auto;
+    }
+}

@@ -1,0 +1,283 @@
+/* =========================================
+   Variables locales (complementan el tema global)
+========================================= */
+.dashboard-container {
+  --inv-font-body:    var(--font-body);
+  --inv-font-display: var(--font-display);
+
+  /* Neutros */
+  --inv-surface:      var(--bg-primary);
+  --inv-border:       var(--bg-tertiary);
+  --inv-border-light: color-mix(in srgb, var(--inv-border) 50%, transparent);
+
+  /* Acento único — tinta oscura cálida */
+  --inv-ink:          var(--text-primary);
+  --inv-ink-muted:    var(--text-secondary);
+  --inv-accent:       var(--color-primary);
+  --inv-accent-bg:    var(--color-primary-light);
+
+  /* Tipografía */
+  --inv-text-xs:   0.75rem;
+  --inv-text-sm:   0.8125rem;
+  --inv-text-base: 0.9375rem;
+  --inv-text-lg:   1.125rem;
+  --inv-text-xl:   1.5rem;
+  --inv-text-2xl:  2rem;
+
+  /* Espaciado */
+  --inv-space-1:  0.25rem;
+  --inv-space-2:  0.5rem;
+  --inv-space-3:  0.75rem;
+  --inv-space-4:  1rem;
+  --inv-space-5:  1.25rem;
+  --inv-space-6:  1.5rem;
+  --inv-space-8:  2rem;
+  --inv-space-10: 2.5rem;
+
+  /* Radio */
+  --inv-radius-sm: 3px;
+  --inv-radius-md: 6px;
+  --inv-radius-lg: 10px;
+}
+
+/* =========================================
+   Layout base
+========================================= */
+.dashboard-container {
+  font-family: var(--inv-font-body);
+  color: var(--inv-ink);
+  background-color: var(--inv-surface);
+  padding: var(--inv-space-8) var(--inv-space-10);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Page header
+========================================= */
+.page-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--inv-space-4);
+  margin-bottom: var(--inv-space-8);
+  padding-bottom: var(--inv-space-5);
+  border-bottom: 1px solid var(--inv-border);
+}
+
+.page-title {
+  font-family: var(--inv-font-display);
+  font-size: var(--inv-text-2xl);
+  font-weight: 400;           /* Serif display no necesita bold */
+  letter-spacing: -0.02em;
+  color: var(--inv-ink);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.page-subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--inv-ink-muted);
+  font-family: var(--inv-font-body);
+  font-size: var(--inv-text-sm);
+}
+
+/* Etiqueta discreta junto al título */
+.page-title::after {
+  content: 'Inventario';
+  display: none; /* placeholder — se puede activar si se añade un subtitle element */
+}
+
+/* =========================================
+   Sección de tabla
+========================================= */
+.dashboard-table-section {
+  margin-bottom: var(--inv-space-8);
+}
+
+/* =========================================
+   Contenedor de búsqueda
+========================================= */
+.table-search-container {
+  padding: var(--inv-space-4) var(--inv-space-5);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--inv-border);
+  border-radius: var(--inv-radius-lg);
+  margin-bottom: var(--inv-space-6);
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Sin sombra decorativa — la estructura habla por sí sola */
+}
+
+.search-inputs-row {
+  display: flex;
+  gap: var(--inv-space-3);
+  align-items: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--inv-ink-muted);
+  pointer-events: none;
+}
+
+/* =========================================
+   Inputs de búsqueda
+========================================= */
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.875rem 0.5rem 2.25rem;
+  border: 1px solid var(--inv-border);
+  border-radius: var(--inv-radius-md);
+  font-family: var(--inv-font-body);
+  font-size: var(--inv-text-sm);
+  font-weight: 400;
+  color: var(--inv-ink);
+  background-color: var(--bg-input);
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow  0.15s ease;
+
+  /* Placeholder más sutil */
+}
+
+.search-input::placeholder {
+  color: var(--inv-ink-muted);
+  font-weight: 300;
+}
+
+.search-input:focus {
+  border-color: var(--inv-accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--inv-accent) 15%, transparent);
+}
+
+.primary-search {
+  flex: 2;
+  min-width: 240px;
+}
+
+.secondary-search {
+  flex: 1;
+  min-width: 160px;
+}
+
+/* =========================================
+   Botón de búsqueda
+========================================= */
+.search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--inv-font-body);
+  font-size: var(--inv-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  background-color: var(--inv-ink);
+  color: var(--corp-white);
+
+  padding: 0.5rem 1.375rem;
+  border: 1px solid var(--inv-ink);
+  border-radius: var(--inv-radius-md);
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    color            0.15s ease;
+
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: var(--inv-accent);
+  border-color: var(--inv-accent);
+  transform: none; /* sin rebote — más sobrio */
+}
+
+.search-button:active {
+  opacity: 0.85;
+}
+
+/* =========================================
+   Estados de carga / error
+========================================= */
+.table-message-center {
+  font-family: var(--inv-font-body);
+  font-size: var(--inv-text-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  padding: var(--inv-space-10) 0;
+  color: var(--inv-ink-muted);
+}
+
+/* =========================================
+   Loading overlay (si se usa)
+========================================= */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 25, 23, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-content {
+  font-family: var(--inv-font-body);
+  font-size: var(--inv-text-base);
+  font-weight: 500;
+  color: var(--corp-white);
+  display: flex;
+  align-items: center;
+  gap: var(--inv-space-4);
+}
+
+.spinner {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--corp-white);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   Responsive
+========================================= */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: var(--inv-space-5) var(--inv-space-4);
+  }
+
+  .page-title {
+    font-size: var(--inv-text-xl);
+  }
+
+  .search-inputs-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-button {
+    width: 100%;
+    text-align: center;
+  }
+}

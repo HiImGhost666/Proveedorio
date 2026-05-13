@@ -1,0 +1,306 @@
+/* src/features/dashboard/pages/DashboardPage.css */
+
+.dashboard-container {
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.875rem; /* equivalent to text-3xl */
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dashboard-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 0.375rem; /* equivalent to rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* equivalent to shadow-sm */
+  font-size: 0.875rem; /* equivalent to text-sm */
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-button:hover {
+  background-color: var(--brand-100);
+  color: var(--color-brand-title);
+}
+
+.action-button svg {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-2-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+  
+.col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Responsive Grids */
+@media (max-width: 1024px) {
+    .grid-cols-4, .grid-cols-3, .grid-cols-2-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-4, .grid-cols-3, .grid-cols-2-3, .grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+
+/* Cards */
+.dashboard-card {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 0.75rem; /* equivalent to rounded-xl */
+  border: 1px solid var(--bg-tertiary);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* equivalent to shadow-sm */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.card-title {
+  font-size: 1.125rem; /* equivalent to text-lg */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* KPI Card */
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kpi-icon {
+  padding: 0.75rem;
+  border-radius: 9999px; /* full */
+}
+
+.kpi-icon svg {
+    width: 1.75rem; /* w-7 */
+    height: 1.75rem; /* h-7 */
+}
+
+.kpi-info-title {
+  font-size: 0.875rem; /* text-sm */
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.kpi-info-value {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Stock Semaphore Cards */
+.semaphore-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.semaphore-icon {
+  margin-right: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.semaphore-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.semaphore-label {
+    font-size: 0.875rem;
+}
+
+.bg-green {
+  background-color: var(--color-status-success-text);
+}
+.bg-yellow {
+  background-color: var(--color-accent-orange);
+}
+.bg-red {
+  background-color: var(--color-primary);
+}
+.icon-blue { background-color: var(--brand-100); color: var(--brand-700); }
+.icon-purple { background-color: var(--corp-soft); color: var(--brand-800); }
+.icon-green { background-color: var(--color-status-success-bg); color: var(--color-status-success-text); }
+.icon-orange { background-color: var(--color-status-warning-bg); color: var(--color-accent-orange); }
+
+/* Table */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simple-table th, .simple-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.simple-table th {
+  font-size: 0.75rem; /* text-xs */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background-color: var(--bg-primary);
+}
+
+.simple-table td {
+  font-size: 0.875rem; /* text-sm */
+  color: var(--text-secondary);
+}
+
+.table-product-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.price-variation {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.price-up {
+  color: var(--color-primary);
+}
+
+.price-down {
+  color: var(--color-status-success-text);
+}
+
+.price-variation svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+/* Zombies Table */
+.zombies-card {
+    border-left: none;
+}
+
+.zombies-title-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem;
+  color: var(--color-accent-orange);
+}
+
+.zombies-table thead {
+  background-color: var(--color-status-warning-bg);
+  color: var(--color-status-warning-text);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.zombies-table .inactive-days-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem; /* px-2.5 py-0.5 */
+    border-radius: 9999px; /* rounded-full */
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 500;
+    background-color: var(--color-status-warning-bg);
+    color: var(--color-status-warning-text);
+}
+
+
+/* Loading and Error States */
+.centered-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+}
+
+/* System Status Alert */
+.system-status-alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+}
+.system-status-alert.success {
+  background-color: var(--color-status-success-bg);
+  border-color: var(--color-status-success-border);
+  color: var(--color-status-success-text);
+}
+.system-status-alert.error {
+  background-color: var(--color-status-error-bg);
+  border-color: var(--color-status-error-border);
+  color: var(--color-status-error-text);
+}
+
+.status-alert-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.system-status-alert ul {
+  list-style: disc;
+  list-style-position: inside;
+  margin-top: 0.5rem;
+}

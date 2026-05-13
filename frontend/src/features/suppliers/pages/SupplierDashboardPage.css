@@ -1,0 +1,160 @@
+/* SupplierDashboardPage.css adaptado */
+
+/* Página completa */
+.supplier-dashboard-page {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Contenedor central */
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header del proveedor */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.detail-title {
+  font-size: 1.875rem;
+  /* 28px */
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.back-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* KPIs */
+.products-view .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  /* 20px */
+}
+
+@media (min-width: 768px) {
+  .products-view .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.products-view .grid div {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  border: 1px solid var(--bg-tertiary);
+}
+
+.products-view .grid div p:first-child {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.products-view .grid div p:last-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.products-view .grid div p.text-red-600 {
+  color: var(--color-danger);
+}
+
+.products-view .grid div p.text-blue-600 {
+  color: var(--color-primary);
+}
+
+/* Tabla de productos */
+.table-container {
+  overflow-x: auto;
+  margin-top: 2.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.data-table thead {
+  background-color: var(--bg-tertiary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--text-primary);
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+}
+
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable-header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  /* 6px */
+}
+
+.sort-icon {
+  font-size: 0.75rem;
+  /* 12px */
+  color: var(--text-secondary);
+}
+
+.sort-icon.active {
+  color: var(--color-primary);
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid var(--bg-tertiary);
+  transition: background-color 0.2s;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: var(--bg-primary);
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Mensajes de carga y sin productos */
+.loading-message,
+.no-products-message {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}

@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+# Fallback scrape directo.
+# Si Alloy no arranca por problemas de pull/red, Prometheus sigue recolectando
+# métricas de backend sin depender de remote_write.
+scrape_configs:
+  - job_name: "backend"
+    metrics_path: "/actuator/prometheus"
+    static_configs:
+      - targets: ["backend:8080"]
+        labels:
+          application: "inventory"

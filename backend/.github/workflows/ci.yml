@@ -1,0 +1,92 @@
+name: Backend CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - master
+      - staging
+      - prod
+  workflow_dispatch:
+
+jobs:
+  test-and-package:
+    runs-on: ubuntu-latest
+
+    services:
+      mariadb:
+        image: mariadb:11.4.5
+        env:
+          MARIADB_DATABASE: inventario
+          MARIADB_USER: inventario
+          MARIADB_PASSWORD: inventario
+          MARIADB_ROOT_PASSWORD: root
+        options: >-
+          --health-cmd="mariadb-admin ping -h 127.0.0.1 -uroot -proot || exit 1"
+          --health-start-period=20s
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=30
+
+      vault:
+        image: hashicorp/vault:1.16.2
+        env:
+          VAULT_DEV_ROOT_TOKEN_ID: dev-root-token
+        ports:
+          - 8200:8200
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Make mvnw executable
+        run: chmod +x mvnw
+
+      - name: Seed Vault KV secrets
+        env:
+          VAULT_ADDR: http://127.0.0.1:8200
+          VAULT_TOKEN: dev-root-token
+          SPRING_DATASOURCE_PASSWORD: inventario
+          APP_SECURITY_SECRET_KEY: '0123456789abcdef'
+          JWT_SECRET_KEY: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef'
+        run: |
+          echo "Waiting Vault..."
+          for i in {1..30}; do
+            if curl -fsS "${VAULT_ADDR}/v1/sys/health" >/dev/null 2>&1; then
+              break
+            fi
+            sleep 2
+          done
+
+          payload=$(cat <<EOF
+          {
+            "data": {
+              "spring.datasource.password": "${SPRING_DATASOURCE_PASSWORD}",
+              "app.security.secret-key": "${APP_SECURITY_SECRET_KEY}",
+              "jwt.secret-key": "${JWT_SECRET_KEY}"
+            }
+          }
+          EOF
+          )
+
+          curl -sS -X POST "${VAULT_ADDR}/v1/secret/data/inventario" \
+            -H "X-Vault-Token: ${VAULT_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "${payload}"
+
+      - name: Run tests
+        env:
+          # Force profile=test and rely on src/test/resources (H2 by default).
+          SPRING_PROFILES_ACTIVE: test
+        run: ./mvnw -B test -Dspring.profiles.active=test
+
+      - name: Package application (skip tests)
+        run: ./mvnw -B clean package -DskipTests
+

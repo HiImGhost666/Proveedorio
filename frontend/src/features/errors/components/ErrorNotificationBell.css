@@ -1,0 +1,305 @@
+/* ── Bell container ── */
+.error-bell-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ── Bell button ── */
+.bell-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    transition: background-color 0.2s, color 0.2s;
+    position: relative;
+}
+
+.bell-button:hover {
+    background-color: var(--color-status-error-bg);
+    color: var(--color-danger);
+}
+
+/* ── Unread badge ── */
+.bell-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: var(--color-danger);
+    color: var(--corp-white);
+    border-radius: 9999px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 1px 4px;
+    min-width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--corp-white);
+    animation: bell-pulse 2s infinite;
+    line-height: 1;
+}
+
+@keyframes bell-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* ── Dropdown panel ── */
+.error-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 460px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    overflow: hidden;
+    animation: bell-slideDown 0.15s ease-out forwards;
+}
+
+@keyframes bell-slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Header ── */
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.dropdown-header h3 {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--text-placeholder);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.clear-btn:hover {
+    background-color: var(--color-status-error-bg);
+    color: var(--color-danger);
+}
+
+/* ── Body ── */
+.dropdown-body {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dropdown-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 8px;
+    border-bottom: 1px solid var(--bg-tertiary);
+    background-color: var(--bg-primary);
+}
+
+.tab-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tab-button:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.tab-button.active {
+    background-color: var(--corp-white);
+    color: var(--text-primary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.tab-count {
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background-color: var(--color-danger);
+    color: var(--corp-white);
+    font-size: 0.66rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.dropdown-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dropdown-body::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.dropdown-body::-webkit-scrollbar-thumb {
+    background: var(--text-placeholder);
+    border-radius: 4px;
+}
+
+/* ── Empty state ── */
+.no-errors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 24px 16px;
+    text-align: center;
+    color: var(--text-placeholder);
+    font-size: 0.82rem;
+}
+
+/* ── Error list ── */
+.error-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.error-item {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--bg-tertiary);
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border-left: 3px solid transparent;
+}
+
+.error-item:last-child {
+    border-bottom: none;
+}
+
+.error-item:hover {
+    background-color: var(--color-status-error-bg);
+}
+
+.error-item.unread {
+    border-left-color: var(--color-danger);
+    background-color: var(--color-status-error-bg);
+}
+
+.error-item.read {
+    opacity: 0.65;
+}
+
+/* ── Time + status row ── */
+.error-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.error-time {
+    font-size: 0.72rem;
+    color: var(--text-placeholder);
+    font-variant-numeric: tabular-nums;
+}
+
+.error-status {
+    font-size: 0.72rem;
+    color: var(--color-status-warning-text);
+    font-weight: 700;
+    background-color: var(--color-status-warning-bg);
+    border: 1px solid var(--color-status-warning-border);
+    border-radius: 4px;
+    padding: 0 5px;
+    line-height: 1.4;
+}
+
+/* ── Message ── */
+.bell-error-message {
+    font-size: 0.82rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.45;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    word-break: break-word;
+}
+
+.bell-error-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.error-item.type-error {
+    border-left-color: var(--color-danger);
+}
+
+.error-item.type-offer {
+    border-left-color: var(--color-status-success-text);
+}
+
+.error-item.type-new {
+    border-left-color: var(--color-status-neutral-text);
+}
+
+.error-item.type-general {
+    border-left-color: var(--color-status-warning-text);
+}
+
+@media (max-width: 768px) {
+    .error-dropdown {
+        width: min(92vw, 460px);
+        right: -10px;
+    }
+
+    .dropdown-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+    }
+}

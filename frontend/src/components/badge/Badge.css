@@ -1,0 +1,41 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+/* Variantes */
+.badge-success {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success-text);
+  border: 1px solid var(--color-status-success-border);
+}
+
+.badge-error {
+  background-color: var(--color-status-error-bg);
+  color: var(--color-status-error-text);
+  border: 1px solid var(--color-status-error-border);
+}
+
+.badge-warning {
+  background-color: var(--color-status-warning-bg);
+  color: var(--color-status-warning-text);
+  border: 1px solid var(--color-status-warning-border);
+}
+
+.badge-info {
+  background-color: var(--brand-100);
+  color: var(--brand-700);
+  border: 1px solid var(--brand-200);
+}
+
+.badge-neutral {
+  background-color: var(--color-status-neutral-bg);
+  color: var(--color-status-neutral-text);
+  border: 1px solid var(--color-status-neutral-border);
+}
