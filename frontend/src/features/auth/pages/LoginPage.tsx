@@ -237,7 +237,7 @@ const LoginPage = () => {
           </form>
 
           <p className="login-footer">
-            Acceso restringido a personal autorizado de LABERIT.<br />
+            Acceso restringido a personal autorizado de Proveedorio.<br />
             Las actividades son monitoreadas.
           </p>
 
