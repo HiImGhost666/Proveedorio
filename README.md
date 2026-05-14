@@ -1,24 +1,51 @@
-# Web App Inventario
+<div align="center">
 
-Proyecto full stack para gestion de inventario y proveedores.
+<p align="center">
+  <picture>
+    <source 
+      media="(prefers-color-scheme: dark)" 
+      srcset="frontend/src/assets/ProveedoresLogo_Light.png"
+    >
+    <source 
+      media="(prefers-color-scheme: light)" 
+      srcset="frontend/src/assets/ProveedoresLogo_Dark.png"
+    >
+    <img 
+      src="frontend/src/assets/ProveedoresLogo_Light.png"
+      alt="Logo" 
+      width="300"
+    >
+  </picture>
+</p>
 
-## Resumen
+# Inventory & Supplier Management System
 
-- Backend: Spring Boot (Java 21)
-- Frontend: React + Vite (Nginx)
-- Base de datos: MariaDB (local por defecto)
-- Secretos: Vault (dev mode)
-- Observabilidad: Prometheus + Grafana + Alloy
-- Mock de proveedores: json-mock-server (puertos 3001-3004)
+### Full Stack Enterprise Inventory Platform
 
-## Estructura
+Aplicación full stack enfocada en gestión de inventario, proveedores, monitoreo y seguridad de secretos utilizando una arquitectura moderna basada en contenedores.
 
-- backend/: API Spring Boot
-- frontend/: UI React + Vite
-- infra/: Vault init, monitoring, mock server, docs de infraestructura
-- docker-compose.yml: stack completo local
-- .env / .env.example: variables de entorno
-- logs/: logs de backend y frontend
+<br>
+
+<img src="https://skillicons.dev/icons?i=java,spring,react,ts,docker,mysql,grafana,nginx"/>
+
+<br>
+
+![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
+![Java](https://img.shields.io/badge/java-21-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+
+</div>
+
+---
+
+## Features
+
+- Gestión de inventario y proveedores
+- API REST segura con JWT
+- Monitoreo con Grafana y Prometheus
+- Gestión de secretos con Vault
+- Stack dockerizado completo
+- Arquitectura escalable y desacoplada
 
 ## Requisitos
 
